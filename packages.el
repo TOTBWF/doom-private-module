@@ -2,6 +2,7 @@
 ;;; ~/.doom.d/packages.el
 
 (package! org-chef :recipe (:fetcher github :repo "Chobbes/org-chef"))
+(package! graphql-mode)
 
 ;;; Examples:
 ;; (package! some-package)

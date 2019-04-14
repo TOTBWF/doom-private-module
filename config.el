@@ -2,6 +2,7 @@
 
 (def-package! org-chef :after org)
 
+(def-package! graphql-mode)
 
 (after! haskell-mode
   (setq haskell-auto-insert-module-format-string "-- |
