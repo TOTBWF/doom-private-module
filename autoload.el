@@ -7,3 +7,9 @@
          (ty-str (apply #'intero-get-type-at thing))
          (ty (nth 1 (split-string ty-str ":: "))))
     (shell-command (concat "stack hoogle \"" ty "\"") (intero-help-buffer))))
+
+;;;###autoload
+(defun close-popup-buffers ()
+  "Interactive command wrapping +popup|close-on-escape"
+  (interactive)
+  (+popup|close-on-escape))
