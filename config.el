@@ -14,3 +14,14 @@
         "q" #'fsharp-ac/stop-process
         "t" #'fsharp-ac/show-tooltip-at-point
         ))
+
+(after! haskell-mode
+  (setq haskell-auto-insert-module-format-string "-- |
+  -- Module      :  %1$s
+  -- Copyright   :  (c) Reed Mullanix 2019
+  -- License     :  BSD-style
+  -- Maintainer  :  reedmullanix@gmail.com
+  --
+  module %1$s
+  (
+  ) where\n"))

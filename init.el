@@ -159,20 +159,3 @@
        (default +bindings +evil-commands))
 
 (set-face-attribute 'default nil :height 100)
-
-(setq haskell-auto-insert-module-format-string "-- |
--- Module      :  %1$s
--- Copyright   :  (c) Reed Mullanix 2019
--- License     :  BSD-style
--- Maintainer  :  reedmullanix@gmail.com
---
-module %1$s
-  (
-  ) where\n")
-
-;; Use hoogle to try to find something to fill the given hole
-(defun hoogle-fill-hole (insert)
-  (let* ((thing (intero-thing-at-point))
-         (ty-str (apply #'intero-get-type-at thing))
-         (ty (nth 1 (split-string ty-str ":: "))))
-    (shell-command (concat "stack hoogle \"" ty "\"") (intero-help-buffer))))
