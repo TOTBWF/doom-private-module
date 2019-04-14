@@ -1,7 +1,6 @@
 ;; -*- no-byte-compile: t; -*-
 ;;; ~/.doom.d/packages.el
 
-(package! fsharp-mode)
 (package! org-chef :recipe (:fetcher github :repo "Chobbes/org-chef"))
 
 ;;; Examples:
